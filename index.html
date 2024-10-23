@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Zorrito Andaluz</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #top-text {
+            position: absolute;
+            top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        #top-text h1 {
+            margin: 0;
+            font-family: 'Georgia', serif; /* Example of custom font for the title */
+            color: #2c3e50; /* Example color for title */
+        }
+
+        #random-text {
+            font-size: 24px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace; /* Example custom font for random text */
+            color: #e74c3c; /* Example color for random text */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="top-text">
+        <h1>El Zorrito<br>Andaluz</h1>
+    </div>
+
+    <div id="random-text"></div>
+
+    <script>
+        // Array of random text
+        const textArray = [
+            "Eres la puta hostia!",
+            "Que hermosura!",
+            "Es un dia pa perrear.",
+            "Que cuerpo mas poderoso tienes, no?",
+            "Te como!"
+        ];
+
+        // Select a random text from the array
+        function getRandomText() {
+            const randomIndex = Math.floor(Math.random() * textArray.length);
+            return textArray[randomIndex];
+        }
+
+        // Display the random text in the middle of the page
+        document.getElementById('random-text').textContent = getRandomText();
+    </script>
+
+</body>
+</html>
